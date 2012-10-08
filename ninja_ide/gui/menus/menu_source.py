@@ -53,15 +53,15 @@ class MenuSource(QObject):
                 resources.get_shortcut("Uncomment").toString(
                     QKeySequence.NativeText))))
         horizontalLineAction = menuSource.addAction(
-            self.tr("Insert Horizontal Line (%s)" %
+            self.tr(u"Insert Horizontal Line (%s)".format(
                 resources.get_shortcut("Horizontal-line").toString(
-                    QKeySequence.NativeText)))
+                    QKeySequence.NativeText))))
         titleCommentAction = menuSource.addAction(
-            self.tr("Insert Title Comment (%s)" %
+            self.tr(u"Insert Title Comment (%s)".format(
                 resources.get_shortcut("Title-comment").toString(
-                    QKeySequence.NativeText)))
+                    QKeySequence.NativeText))))
         countCodeLinesAction = menuSource.addAction(
-            self.tr("Count Code Lines"))
+            self.tr(u"Count Code Lines"))
         menuSource.addSeparator()
 #        tellTaleAction = menuSource.addAction(
 #            self.tr("Tell me a Tale of Code"))
