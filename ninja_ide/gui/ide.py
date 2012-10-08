@@ -417,13 +417,10 @@ class __IDE(QMainWindow):
         if qsettings.value("window/maximized", 'true') == 'true':
             self.setWindowState(Qt.WindowMaximized)
         else: 
-            print dir(QSizeF) 
-
-
             self.resize(qsettings.value("window/size",
-                QSizeF(800, 600)).toSize())
+                QSizeF(800, 600).toSize()))
             self.move(qsettings.value("window/pos",
-                QPointF(100, 100)).toPoint())
+                QPointF(100, 100).toPoint()))
 
     def closeEvent(self, event):
         if self.s_listener:
