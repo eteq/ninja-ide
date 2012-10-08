@@ -39,17 +39,17 @@ class MenuFile(QObject):
         QObject.__init__(self)
 
         newAction = menuFile.addAction(QIcon(resources.IMAGES['new']),
-            self.tr(u"&New File ({0})".format(
+            self.trUtf8(u"&New File ({0})".format(
                 resources.get_shortcut("New-file").toString(
                     QKeySequence.NativeText))))
         newProjectAction = menuFile.addAction(
             QIcon(resources.IMAGES['newProj']),
-            self.tr(u"New Pro&ject ({0})".format (
+            self.trUtf8(u"New Pro&ject ({0})".format (
                 resources.get_shortcut("New-project").toString(
                     QKeySequence.NativeText))))
         menuFile.addSeparator()
         saveAction = menuFile.addAction(QIcon(resources.IMAGES['save']),
-            self.tr(u"&Save ({0})".format( 
+            self.trUtf8(u"&Save ({0})".format( 
                 resources.get_shortcut("Save-file").toString(
                     QKeySequence.NativeText))))
         saveAsAction = menuFile.addAction(QIcon(resources.IMAGES['saveAs']),
@@ -58,23 +58,23 @@ class MenuFile(QObject):
             self.tr("Save All"))
         saveProjectAction = menuFile.addAction(QIcon(
             resources.IMAGES['saveAll']),
-            self.tr(u"Save Pro&ject  ({0})".format( 
+            self.trUtf8(u"Save Pro&ject  ({0})".format( 
                 resources.get_shortcut("Save-project").toString(
                     QKeySequence.NativeText))))
         menuFile.addSeparator()
         reloadFileAction = menuFile.addAction(
             QIcon(resources.IMAGES['reload-file']),
-            self.tr("Reload File ({0})" %
+            self.trUtf8(u"Reload File ({0})".format(
                 resources.get_shortcut("Reload-file").toString(
-                    QKeySequence.NativeText)))
+                    QKeySequence.NativeText))))
         menuFile.addSeparator()
         openAction = menuFile.addAction(QIcon(resources.IMAGES['open']),
-            self.tr(u"&Open ({0})".format( 
+            self.trUtf8(u"&Open ({0})".format( 
                 resources.get_shortcut("Open-file").toString(
                     QKeySequence.NativeText))))
         openProjectAction = menuFile.addAction(
             QIcon(resources.IMAGES['openProj']),
-            self.tr(u"Open &Project ({0})".format( 
+            self.trUtf8(u"Open &Project ({0})".format( 
                 resources.get_shortcut("Open-project").toString(
                     QKeySequence.NativeText))))
         self.recent_files = menuFile.addMenu(self.tr('Open Recent Files'))
@@ -87,12 +87,12 @@ class MenuFile(QObject):
             self.tr("Deactivate Profile"))
         menuFile.addSeparator()
         printFile = menuFile.addAction(QIcon(resources.IMAGES['print']),
-            self.tr(u"Pr&int File ({0})".format( 
+            self.trUtf8(u"Pr&int File ({0})".format( 
                 resources.get_shortcut("Print-file").toString(
                     QKeySequence.NativeText))))
         closeAction = menuFile.addAction(
             ide.style().standardIcon(QStyle.SP_DialogCloseButton),
-            self.tr(u"&Close Tab ({0})".format( 
+            self.trUtf8(u"&Close Tab ({0})".format( 
                 resources.get_shortcut("Close-tab").toString(
                     QKeySequence.NativeText))))
         closeProjectsAction = menuFile.addAction(

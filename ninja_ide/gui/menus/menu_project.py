@@ -31,9 +31,9 @@ class MenuProject(QObject):
         QObject.__init__(self)
 
         runAction = menuProject.addAction(QIcon(resources.IMAGES['play']),
-            self.tr("Run Project ({0})" %
+            self.trUtf8(u"Run Project ({0})".format(
                 resources.get_shortcut("Run-project").toString(
-                    QKeySequence.NativeText)))
+                    QKeySequence.NativeText))))
 #        debugAction = menuProject.addAction(
 #            QIcon(resources.IMAGES['debug']),
 #            self.tr("Debug Project ({0})" %
@@ -41,11 +41,11 @@ class MenuProject(QObject):
 #                    QKeySequence.NativeText)))
         runFileAction = menuProject.addAction(
             QIcon(resources.IMAGES['file-run']),
-            self.tr(u"Run File ({0})".format( 
+            self.trUtf8(u"Run File ({0})".format( 
                 resources.get_shortcut("Run-file").toString(
                     QKeySequence.NativeText))))
         stopAction = menuProject.addAction(QIcon(resources.IMAGES['stop']),
-            self.tr("Stop ({0})".format(
+            self.trUtf8(u"Stop ({0})".format(
                 resources.get_shortcut("Stop-execution").toString(
                     QKeySequence.NativeText))))
         menuProject.addSeparator()
