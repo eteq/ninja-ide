@@ -34,30 +34,30 @@ class MenuSource(QObject):
 
         indentMoreAction = menuSource.addAction(
             QIcon(resources.IMAGES['indent-more']),
-            self.tr(u"Indent More (%s)".format( 
+            self.tr(u"Indent More ({0})".format( 
                 QKeySequence(Qt.Key_Tab).toString(QKeySequence.NativeText))))
         indentLessAction = menuSource.addAction(
             QIcon(resources.IMAGES['indent-less']),
-            self.tr(u"Indent Less (%s)".format(
+            self.tr(u"Indent Less ({0})".format(
                 resources.get_shortcut("Indent-less").toString(
                     QKeySequence.NativeText))))
         menuSource.addSeparator()
         commentAction = menuSource.addAction(
             QIcon(resources.IMAGES['comment-code']),
-            self.tr(u"Comment (%s)".format( 
+            self.tr(u"Comment ({0})".format( 
                 resources.get_shortcut("Comment").toString(
                     QKeySequence.NativeText))))
         unCommentAction = menuSource.addAction(
             QIcon(resources.IMAGES['uncomment-code']),
-            self.tr(u"Uncomment (%s)".format(
+            self.tr(u"Uncomment ({0})".format(
                 resources.get_shortcut("Uncomment").toString(
                     QKeySequence.NativeText))))
         horizontalLineAction = menuSource.addAction(
-            self.tr(u"Insert Horizontal Line (%s)".format(
+            self.tr(u"Insert Horizontal Line ({0})".format(
                 resources.get_shortcut("Horizontal-line").toString(
                     QKeySequence.NativeText))))
         titleCommentAction = menuSource.addAction(
-            self.tr(u"Insert Title Comment (%s)".format(
+            self.tr(u"Insert Title Comment ({0})".format(
                 resources.get_shortcut("Title-comment").toString(
                     QKeySequence.NativeText))))
         countCodeLinesAction = menuSource.addAction(
@@ -68,13 +68,13 @@ class MenuSource(QObject):
 #        tellTaleAction.setEnabled(False)
         goToDefinitionAction = menuSource.addAction(
             QIcon(resources.IMAGES['go-to-definition']),
-            self.tr(u"Go To Definition (%s or %s+Click)".format( 
-                (resources.get_shortcut("Go-to-definition").toString(
+            self.tr(u"Go To Definition ({0} or {1}+Click)".format( 
+                resources.get_shortcut("Go-to-definition").toString(
                     QKeySequence.NativeText),
-                settings.OS_KEY))))
+                settings.OS_KEY)))
         insertImport = menuSource.addAction(
             QIcon(resources.IMAGES['insert-import']),
-            self.tr(u"Insert &Import (%s)".format( 
+            self.tr(u"Insert &Import ({0})".format( 
                 resources.get_shortcut("Import").toString(
                     QKeySequence.NativeText))))
         menu_debugging = menuSource.addMenu(self.tr("Debugging Tricks"))
@@ -93,18 +93,18 @@ class MenuSource(QObject):
             self.tr("&Remove Trailing Spaces"))
         replaceTabsSpaces = menuSource.addAction(
             self.tr("Replace Tabs With &Spaces"))
-        moveUp = menuSource.addAction(self.tr(u"Move &Up (%s)".format( 
+        moveUp = menuSource.addAction(self.tr(u"Move &Up ({0})".format( 
             resources.get_shortcut("Move-up").toString(
                 QKeySequence.NativeText))))
-        moveDown = menuSource.addAction(self.tr(u"Move &Down (%s)".format( 
+        moveDown = menuSource.addAction(self.tr(u"Move &Down ({0})".format( 
             resources.get_shortcut("Move-down").toString(
                 QKeySequence.NativeText))))
         duplicate = menuSource.addAction(
-            self.tr("Duplica&te (%s)".format( 
+            self.tr("Duplica&te ({0})".format( 
                 resources.get_shortcut("Duplicate").toString(
                     QKeySequence.NativeText))))
         remove = menuSource.addAction(
-            self.tr(u"&Remove Line (%s)".format( 
+            self.tr(u"&Remove Line ({0})".format( 
                 resources.get_shortcut("Remove-line").toString(
                     QKeySequence.NativeText))))
 

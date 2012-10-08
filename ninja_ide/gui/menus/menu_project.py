@@ -31,21 +31,21 @@ class MenuProject(QObject):
         QObject.__init__(self)
 
         runAction = menuProject.addAction(QIcon(resources.IMAGES['play']),
-            self.tr("Run Project (%s)" %
+            self.tr("Run Project ({0})" %
                 resources.get_shortcut("Run-project").toString(
                     QKeySequence.NativeText)))
 #        debugAction = menuProject.addAction(
 #            QIcon(resources.IMAGES['debug']),
-#            self.tr("Debug Project (%s)" %
+#            self.tr("Debug Project ({0})" %
 #                resources.get_shortcut("Debug").toString(
 #                    QKeySequence.NativeText)))
         runFileAction = menuProject.addAction(
             QIcon(resources.IMAGES['file-run']),
-            self.tr(u"Run File (%s)".format( 
+            self.tr(u"Run File ({0})".format( 
                 resources.get_shortcut("Run-file").toString(
                     QKeySequence.NativeText))))
         stopAction = menuProject.addAction(QIcon(resources.IMAGES['stop']),
-            self.tr("Stop (%s)".format(
+            self.tr("Stop ({0})".format(
                 resources.get_shortcut("Stop-execution").toString(
                     QKeySequence.NativeText))))
         menuProject.addSeparator()
